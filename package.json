@@ -1,0 +1,26 @@
+{
+  "name": "confjson",
+  "version": "0.0.1",
+  "description": "Load settings file or create one with defaults",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "defaults",
+    "config",
+    "nodejs"
+  ],
+  "author": "clarkttfu@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zealotds/confjson.git"
+  },
+  "devDependencies": {
+    "should": "^13.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
