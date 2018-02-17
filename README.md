@@ -1,7 +1,11 @@
 confjson
 ====
 
-1. In your app entrypoint, set defaults and load from file and create the file with defaults if not found.
+## Get started
+
+### Set defaults at app entrypoint
+
+Values loaded from config.json will override defaults or the file will be created if not found.
 
 ```
 const config = require('confjson')({
@@ -9,14 +13,15 @@ const config = require('confjson')({
 }, 'config/config.json')
 ```
 
-2. In app sub modules, call `confjson` with nothing to get config
+### Get settings in app sub modules
 
 ```
 const config = require('confjson')()
-...
 ```
 
-3. In test cases, alter the (global) config to make conditions 
+### Override settings in test cases
+
+Alter the (global) config to make test conditions 
 
 ```
 const config = require('confjson)({

@@ -1,6 +1,6 @@
 {
   "name": "confjson",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Load settings file or create one with defaults",
   "main": "index.js",
   "scripts": {
