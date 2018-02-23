@@ -1,9 +1,11 @@
 const fs = require('fs')
 const path = require('path')
+const process = require('process')
 const _ = require('lodash')
 
 function loadFileSync (file, defaults) {
-  var filepath = path.isAbsolute(file) ? file : path.join(path.dirname(module.parent.filename), file)
+  var basedir = module.parent.filename ? path.dirname(module.parent.filename) : process.cwd()
+  var filepath = path.isAbsolute(file) ? file : path.join(basedir, file)
   try {
     return _.defaultsDeep(require(filepath), defaults || {})
   } catch(err) {
