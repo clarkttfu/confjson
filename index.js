@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const process = require('process')
 const _ = require('lodash')
+const mkdirp = require('mkdirp')
 
 function loadFileSync (file, defaults) {
   var basedir = module.parent.filename ? path.dirname(module.parent.filename) : process.cwd()
@@ -10,6 +11,7 @@ function loadFileSync (file, defaults) {
     return _.defaultsDeep(require(filepath), defaults || {})
   } catch(err) {
     if (defaults && err && err.code == 'MODULE_NOT_FOUND') {
+      mkdirp.sync(path.dirname(filepath))
       fs.writeFileSync(filepath, JSON.stringify(defaults, null, '  '))
       return _.cloneDeep(defaults)
     }

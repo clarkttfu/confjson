@@ -1,6 +1,6 @@
 {
   "name": "confjson",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Load settings file or create one with defaults",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "should": "^13.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "mkdirp": "^0.5.1"
   }
 }
